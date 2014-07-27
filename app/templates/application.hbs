@@ -1,0 +1,6 @@
+{{#if session.isAuthenticated}}
+  <a {{ action 'invalidateSession' }}>Logout</a>
+{{else}}
+{{/if}}
+
+{{outlet}}

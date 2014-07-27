@@ -1,0 +1,20 @@
+{{grade}} // {{primaryColor}} // {{secondaryColor}}
+
+<div class="grades">
+  {{grade-selector action='gradeSelected'}}
+</div>
+
+<div class="tapes">
+  {{color-selector action='primaryColor'}}
+
+  {{color-selector action='secondaryColor'}}
+
+  <div class="tape-patterns">
+    <div class="tape-pattern">diamond</div>
+    <div class="tape-pattern">double diamond</div>
+    <div class="tape-pattern">square</div>
+    <div class="tape-pattern">double square</div>
+  </div>
+</div>
+
+<button class="btn">save</button>

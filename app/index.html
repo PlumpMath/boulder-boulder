@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Boulder Boulder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/boulder-boulder.css">
+  </head>
+  <body>
+    <script>
+      window.BoulderBoulderENV = {{ENV}};
+      window.ENV = window.BoulderBoulderENV;
+      window.EmberENV = window.BoulderBoulderENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/boulder-boulder.js"></script>
+    <script>
+      window.BoulderBoulder = require('boulder-boulder/app')['default'].create(BoulderBoulderENV.APP);
+    </script>
+  </body>
+</html>
