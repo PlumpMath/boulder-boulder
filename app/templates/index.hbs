@@ -1,20 +1,46 @@
-{{grade}} // {{primaryColor}} // {{secondaryColor}}
+{{grade}} <br />
+{{primaryColor}} | {{secondaryColor}} <br />
+{{tapePattern}}
 
 <div class="grades">
-  {{grade-selector action='gradeSelected'}}
+  {{#each grade in grades}}
+    <label class="grade">
+      {{radio-button selection=controller.grade value=grade}}
+      {{grade}}
+    </label>
+  {{/each}}
 </div>
 
 <div class="tapes">
-  {{color-selector action='primaryColor'}}
-
-  {{color-selector action='secondaryColor'}}
-
-  <div class="tape-patterns">
-    <div class="tape-pattern">diamond</div>
-    <div class="tape-pattern">double diamond</div>
-    <div class="tape-pattern">square</div>
-    <div class="tape-pattern">double square</div>
+  <div>
+    {{#each color in colors}}
+      <label class="color">
+        {{radio-button selection=controller.primaryColor value=color.hex}}
+        {{color-square hex=color.hex name=color.name}}
+        {{color.name}}
+      </label>
+    {{/each}}
   </div>
+
+  <div>
+    {{#each color in colors}}
+      <label class="color">
+        {{radio-button selection=controller.secondaryColor value=color.hex}}
+        {{color-square hex=color.hex name=color.name}}
+        {{color.name}}
+      </label>
+    {{/each}}
+  </div>
+
+  <div>
+    {{#each tape in tapePatterns}}
+      <label class="tape">
+        {{radio-button selection=controller.tapePattern value=tape}}
+        {{tape}}
+      </label>
+    {{/each}}
+  </div>
+
 </div>
 
-<button class="btn">save</button>
+<button class="btn" {{action 'save'}}>save</button>

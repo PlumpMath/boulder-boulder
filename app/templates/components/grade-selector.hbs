@@ -1,6 +1,0 @@
-<div class="grades">
-  {{#each selectableGrades}}
-    <div {{bind-attr class=":grade isSelected:selected:"}}
-      {{action 'select' this}}>{{content}}</div>
-  {{/each}}
-</div>

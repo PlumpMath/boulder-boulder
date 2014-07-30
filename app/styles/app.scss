@@ -3,6 +3,13 @@ html, body {
   padding: 0;
 }
 
+.grade, .tape, .color {
+  cursor: pointer;
+  input {
+    display: none;
+  }
+}
+
 .grades {
   overflow-x: scroll;
   white-space: nowrap;
@@ -12,7 +19,6 @@ html, body {
     display: inline-block;
     white-space: normal;
     padding: 15px;
-    cursor: pointer;
     &.selected {
       background: #ececec;
     }
@@ -20,20 +26,15 @@ html, body {
 
 }
 
-.selectable-colors {
-  overflow-x: scroll;
-  white-space: nowrap;
+.color {
+  white-space: normal;
+  display: inline-block;
+  padding: 5px;
 
-  .color {
-    white-space: normal;
-    display: inline-block;
-    padding: 5px;
-    cursor: pointer;
-
-    .color-square {
-      float: left;
-      margin-right: 3px;
-      width: 1em;
-    }
+  .color-square {
+    float: left;
+    margin-right: 3px;
+    width: 1em;
+    height: 1em;
   }
 }
