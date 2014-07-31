@@ -1,6 +1,14 @@
 html, body {
-  margin: 10px;
+  margin: 0;
   padding: 0;
+}
+
+.container {
+  width: auto;
+}
+
+.problem-display {
+  margin: 0 auto;
 }
 
 .grade, .tape, .color {
@@ -38,3 +46,5 @@ html, body {
     height: 1em;
   }
 }
+
+@import 'problem';

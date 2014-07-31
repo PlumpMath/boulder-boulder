@@ -1,18 +1,17 @@
 import Ember from "ember";
 
 export default Ember.ObjectController.extend({
-  grade: 'VB',
+  grade: function() {
+    return this.get('grades.firstObject');
+  }.property(),
   primaryColor: null,
   secondaryColor: null,
-  tapePattern: 'normal',
+  tapePattern: null,
   actions: {
     save: function() {
-      this.setProperties({
-        grade: 'VB',
-        primaryColor: null,
-        secondaryColor: null,
-        tapePattern: 'normal',
-      });
+      console.log(
+        this.getProperties('grade', 'primaryColor', 'secondaryColor', 'tapePattern')
+      );
     },
   },
 });

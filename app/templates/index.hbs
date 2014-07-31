@@ -1,10 +1,10 @@
-{{problem-svg grade=grade primaryColor=primaryColor}}
+{{problem-svg grade=grade primaryColor=primaryColor secondaryColor=secondaryColor}}
 
 <div class="grades">
-  {{#each grades}}
+  {{#each grade in grades}}
     <label class="grade">
-      {{radio-button selection=controller.grade value=name}}
-      {{name}}
+      {{radio-button selection=controller.grade value=grade}}
+      {{grade.name}}
     </label>
   {{/each}}
 </div>
@@ -13,7 +13,7 @@
   <div>
     {{#each color in colors}}
       <label class="color">
-        {{radio-button selection=controller.primaryColor value=color.hex}}
+        {{radio-button selection=controller.primaryColor value=color}}
         {{color-square hex=color.hex name=color.name}}
         {{color.name}}
       </label>
@@ -23,7 +23,7 @@
   <div>
     {{#each color in colors}}
       <label class="color">
-        {{radio-button selection=controller.secondaryColor value=color.hex}}
+        {{radio-button selection=controller.secondaryColor value=color}}
         {{color-square hex=color.hex name=color.name}}
         {{color.name}}
       </label>
