@@ -1,16 +1,10 @@
-<div>
-{{grade}} <br />
-{{primaryColor}} | {{secondaryColor}} <br />
-{{tapePattern}}
-</div>
-
 {{problem-svg grade=grade primaryColor=primaryColor}}
 
 <div class="grades">
-  {{#each grade in grades}}
+  {{#each grades}}
     <label class="grade">
-      {{radio-button selection=controller.grade value=grade}}
-      {{grade}}
+      {{radio-button selection=controller.grade value=name}}
+      {{name}}
     </label>
   {{/each}}
 </div>
