@@ -2,6 +2,8 @@
 
 {{#each}}
   <div>
-    {{grade.name}}<br />
+    {{#link-to 'problem' this}}
+      {{grade.name}}
+    {{/link-to}}
   </div>
 {{/each}}

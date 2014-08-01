@@ -19,7 +19,9 @@ export default Ember.ObjectController.extend({
       this.transitionToRoute('problem', problem);
     },
     nextStep: function() {
-      if (!this.get('inProgress')) return;
+      if (!this.get('inProgress')) {
+        return;
+      }
       this.incrementProperty('step');
     },
   },
