@@ -1,6 +1,6 @@
 # Boulder Boulder
 
-This README outlines the details of collaborating on this Ember application.
+Track your bouldering probelm progress with your friends.
 
 ## Installation
 
