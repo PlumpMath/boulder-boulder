@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #333;
 }
 
 .container {
@@ -9,6 +10,8 @@ html, body {
 
 .problem-display {
   margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
 }
 
 .grade, .tape, .color {
@@ -26,9 +29,7 @@ html, body {
     display: inline-block;
     white-space: normal;
     padding: 15px;
-    &.selected {
-      background: #ececec;
-    }
+    cursor: pointer;
   }
 
 }

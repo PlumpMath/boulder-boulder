@@ -6,6 +6,7 @@ export default Ember.Route.extend({
       // problems: this.store.find('problem'),
       colors: this.store.find('color'),
       grades: this.store.find('grade'),
+      tapePatterns: [],
     });
   },
   // setupController: function(controller, model) {

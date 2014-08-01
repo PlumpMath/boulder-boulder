@@ -10,9 +10,9 @@ var Problem = DS.Model.extend({
 
 Problem.reopenClass({
   FIXTURES: [
-    {id: 1, gradeId: 1, primaryColorId: 1},
-    {id: 2, gradeId: 2, primaryColorId: 2},
-    {id: 3, gradeId: 3, primaryColorId: 3},
+    {id: 1, grade: 1, primaryColor: 1},
+    {id: 2, grade: 2, primaryColor: 2},
+    {id: 3, grade: 3, primaryColor: 3},
   ],
 });
 
