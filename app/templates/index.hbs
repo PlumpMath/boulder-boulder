@@ -10,9 +10,9 @@
 </div>
 
 <div class="tapes">
-  <div>
+  <div class="tape-colors">
     {{#each color in colors}}
-      <label class="color">
+      <label class="color btn">
         {{radio-button selection=controller.primaryColor value=color}}
         {{color-square hex=color.hex name=color.name}}
         {{color.name}}
@@ -20,14 +20,18 @@
     {{/each}}
   </div>
 
-  <div>
+  <div class="tape-colors">
     {{#each color in colors}}
-      <label class="color">
+      <label class="color btn">
         {{radio-button selection=controller.secondaryColor value=color}}
         {{color-square hex=color.hex name=color.name}}
         {{color.name}}
       </label>
     {{/each}}
+    <label class="color btn">
+      {{radio-button selection=controller.secondaryColor value=null}}
+      none
+    </label>
   </div>
 
   <div>
