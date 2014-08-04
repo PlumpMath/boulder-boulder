@@ -6,6 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.resource('gyms');
+  this.resource('gym', {path: '/gyms/:id'});
+
   this.resource('problems', function() {
     this.route('new');
   });

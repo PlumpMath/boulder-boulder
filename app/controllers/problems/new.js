@@ -14,9 +14,13 @@ export default Ember.ObjectController.extend({
   tapePattern: null,
   actions: {
     save: function() {
+      var self = this;
       var problem = this.store.createRecord('problem',
         this.getProperties('grade', 'primaryColor', 'secondaryColor', 'tapePattern'));
-      this.transitionToRoute('problem', problem);
+      problem.set('gym', this.get('session.gym'));
+      problem.save().then(function(model) {
+        self.transitionToRoute('problem', model);
+      });
     },
     nextStep: function() {
       if (!this.get('inProgress')) {

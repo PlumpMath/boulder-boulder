@@ -1,3 +1,9 @@
+<nav>
+  <div>{{link-to 'home' 'index'}}</div>
+  {{#if session.gym }}
+    {{session.gym.name}}
+  {{/if}}
+</nav>
 <div class="container">
   {{outlet}}
 </div>

@@ -1,1 +1,5 @@
-{{link-to 'New Problem' 'problems.new'}}
+<div>
+{{#each}}
+  <span class="btn" {{action 'setGym' this on='click'}}>{{name}}</span>
+{{/each}}
+</div>

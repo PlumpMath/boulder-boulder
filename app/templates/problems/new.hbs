@@ -14,9 +14,9 @@
 {{/multistep-display}}
 
 <div class="tapes">
-
   {{#multistep-display step=2 currentStep=step}}
   <div class="tape-colors">
+    <h2>Tape primary color</h2>
     {{#each color in colors}}
       <label class="color btn">
         {{radio-button selection=controller.primaryColor value=color}}
@@ -29,6 +29,7 @@
 
   {{#multistep-display step=3 currentStep=step}}
   <div class="tape-colors">
+    <h2>Tape secondary color</h2>
     {{#each color in colors}}
       <label class="color btn">
         {{radio-button selection=controller.secondaryColor value=color}}
@@ -45,6 +46,7 @@
 
   {{#multistep-display step=4 currentStep=step}}
   <div>
+    <h2>Tape pattern</h2>
     {{#each tape in tapePatterns}}
       <label class="tape">
         {{radio-button selection=controller.tapePattern value=tape}}
