@@ -1,8 +1,14 @@
 <nav>
-  <div>{{link-to 'home' 'index'}}</div>
   {{#if session.gym }}
-    {{session.gym.name}}
+    <h1>{{session.gym.name}}</h1>
   {{/if}}
+  <ul>
+    <li>{{link-to 'home' 'index'}}</li>
+    {{#if session.gym }}
+    <li>{{link-to 'problems' 'problems'}}</li>
+    <li>{{link-to 'new problem' 'problems.new'}}</li>
+    {{/if}}
+  </ul>
 </nav>
 <div class="container">
   {{outlet}}
