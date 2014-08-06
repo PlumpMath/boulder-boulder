@@ -1,65 +1,71 @@
-<div class="problem-display">
-  {{problem-svg grade=grade primaryColor=primaryColor secondaryColor=secondaryColor}}
-</div>
+<div class="row">
+  <div class="small-12 colums">
+    <div class="problem-display">
+      {{problem-svg grade=grade primaryColor=primaryColor secondaryColor=secondaryColor}}
+    </div>
 
-{{#multistep-display step=1 currentStep=step}}
-<div class="grades">
-  {{#each grade in grades}}
-    <label class="grade">
-      {{radio-button selection=controller.grade value=grade}}
-      {{grade.name}}
-    </label>
-  {{/each}}
-</div>
-{{/multistep-display}}
+    {{#multistep-display step=1 currentStep=step}}
+    <div class="grades">
+      {{#each grade in grades}}
+        <div class="grade-select">
+        <label class="grade">
+          {{radio-button selection=controller.grade value=grade}}
+          {{grade.name}}
+        </label>
+        </div>
+      {{/each}}
+    </div>
+    {{/multistep-display}}
 
-<div class="tapes">
-  {{#multistep-display step=2 currentStep=step}}
-  <div class="tape-colors">
-    <h2>Tape primary color</h2>
-    {{#each color in colors}}
-      <label class="color btn">
-        {{radio-button selection=controller.primaryColor value=color}}
-        {{color-square hex=color.hex name=color.name}}
-        {{color.name}}
-      </label>
-    {{/each}}
+    <div class="tapes">
+      {{#multistep-display step=2 currentStep=step}}
+      <div class="tape-colors">
+        <h2>Tape primary color</h2>
+        {{#each color in colors}}
+          <label class="color btn">
+            {{radio-button selection=controller.primaryColor value=color}}
+            {{color-square hex=color.hex name=color.name}}
+            {{color.name}}
+          </label>
+        {{/each}}
+      </div>
+      {{/multistep-display}}
+
+      {{#multistep-display step=3 currentStep=step}}
+      <div class="tape-colors">
+        <h2>Tape secondary color</h2>
+        {{#each color in colors}}
+          <label class="color btn">
+            {{radio-button selection=controller.secondaryColor value=color}}
+            {{color-square hex=color.hex name=color.name}}
+            {{color.name}}
+          </label>
+        {{/each}}
+        <label class="color btn">
+          {{radio-button selection=controller.secondaryColor value=null}}
+          none
+        </label>
+      </div>
+      {{/multistep-display}}
+
+      {{#multistep-display step=4 currentStep=step}}
+      <div>
+        <h2>Tape pattern</h2>
+        {{#each tape in tapePatterns}}
+          <label class="tape">
+            {{radio-button selection=controller.tapePattern value=tape}}
+            {{tape}}
+          </label>
+        {{/each}}
+      </div>
+      {{/multistep-display}}
+
+    </div>
+
+    {{#if inProgress}}
+    <button class="btn" {{action 'nextStep'}}>next</button>
+    {{/if}}
+
+    <button class="btn" {{action 'save'}}>save</button>
   </div>
-  {{/multistep-display}}
-
-  {{#multistep-display step=3 currentStep=step}}
-  <div class="tape-colors">
-    <h2>Tape secondary color</h2>
-    {{#each color in colors}}
-      <label class="color btn">
-        {{radio-button selection=controller.secondaryColor value=color}}
-        {{color-square hex=color.hex name=color.name}}
-        {{color.name}}
-      </label>
-    {{/each}}
-    <label class="color btn">
-      {{radio-button selection=controller.secondaryColor value=null}}
-      none
-    </label>
-  </div>
-  {{/multistep-display}}
-
-  {{#multistep-display step=4 currentStep=step}}
-  <div>
-    <h2>Tape pattern</h2>
-    {{#each tape in tapePatterns}}
-      <label class="tape">
-        {{radio-button selection=controller.tapePattern value=tape}}
-        {{tape}}
-      </label>
-    {{/each}}
-  </div>
-  {{/multistep-display}}
-
 </div>
-
-{{#if inProgress}}
-<button class="btn" {{action 'nextStep'}}>next</button>
-{{/if}}
-
-<button class="btn" {{action 'save'}}>save</button>

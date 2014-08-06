@@ -1,5 +1,9 @@
-<div>
-{{#each}}
-  <span class="btn" {{action 'setGym' this on='click'}}>{{name}}</span>
-{{/each}}
+<div class='row'>
+
+  <div class="small-12 column">
+  {{#each}}
+    <span class="btn" {{action 'setGym' this on='click'}}>{{name}}</span>
+  {{/each}}
+  </div>
+
 </div>

@@ -3,3 +3,16 @@ text.svg-problem-grade {
   font-size: 34px;
   text-anchor: middle;
 }
+
+div.grades {
+  // @include button-group-style();
+  @include button-group-container();
+
+  .grade-select {
+    @include button-group-style($float: left);
+  }
+
+  label.grade {
+    @include button();
+  }
+}

@@ -1,3 +1,7 @@
+@import 'vendor/foundation/scss/normalize';
+@import 'foundation_settings';
+@import 'vendor/foundation/scss/foundation';
+
 html, body {
   margin: 0;
   padding: 0;
@@ -46,20 +50,6 @@ nav {
   input {
     display: none;
   }
-}
-
-.grades {
-  overflow-x: scroll;
-  white-space: nowrap;
-  padding: 1em 0;
-
-  .grade {
-    display: inline-block;
-    white-space: normal;
-    padding: 15px;
-    cursor: pointer;
-  }
-
 }
 
 .btn {
