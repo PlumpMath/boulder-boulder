@@ -17,5 +17,9 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('vendor/foundation/js/foundation.js');
+app.import({
+  development: 'vendor/foundation/js/foundation.js',
+  production: 'vendor/foundation/js/foundation.min.js'
+});
+
 module.exports = app.toTree();
