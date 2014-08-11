@@ -15,6 +15,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      API_HOST: '//localhost:3000'
     }
   };
 
@@ -31,7 +32,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.API_HOST = '//bouldering-io.herokuapp.com';
   }
 
   return ENV;
