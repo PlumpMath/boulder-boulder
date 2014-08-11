@@ -1,10 +1,12 @@
 <div class="row">
   <div class="small-12 columns">
-    {{#each}}
-      <div>
-        {{#link-to 'problem' this}}
-          {{grade.name}}
-        {{/link-to}}
+    {{#each itemController='problem'}}
+    <div>
+      {{#link-to 'problem' this}}
+        <span class="tape-small tape-primary" {{bind-attr style=tapeStyle}}>&nbsp;</span>
+        <span class="tape-small tape-secondary" {{bind-attr style=tapeSecondaryStyle}}>&nbsp;</span>
+        {{grade.name}}
+      {{/link-to}}
       </div>
     {{/each}}
   </div>

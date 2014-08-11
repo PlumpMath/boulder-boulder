@@ -16,3 +16,16 @@ div.grades {
     @include button();
   }
 }
+
+.tape-small {
+  display: inline-block;
+  float: left;
+
+  &.tape-primary {
+    width: 80px;
+  }
+
+  &.tape-secondary {
+    width: 20px;
+  }
+}

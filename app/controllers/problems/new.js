@@ -20,6 +20,8 @@ export default Ember.ObjectController.extend({
       problem.set('gym', this.get('session.gym'));
       problem.save().then(function(model) {
         self.transitionToRoute('problem', model);
+        self.setProperties({
+          step: 1, primaryColor: null, secondaryColor: null});
       });
     },
     nextStep: function() {

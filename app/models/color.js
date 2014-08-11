@@ -16,4 +16,5 @@ Color.reopenClass({
   ]
 });
 
+
 export default Color;
